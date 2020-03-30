@@ -1,0 +1,118 @@
+
+
+.road {
+  background-image: url("./assets/road.jpg");
+  background-size: 100%;
+  animation: moveIt 5s linear infinite;
+  height: 1000px;
+}
+@keyframes moveIt {
+  from {background-position: bottom ;}
+  to {background-position: top ;}
+}
+
+#map{ 
+  border-style: dotted; 
+  width: 1200px; 
+  height:600px;
+  overflow: hidden;
+  background-image: url("./assets/background4.jpg");
+}
+ 
+/* ============== person css classes below ====================== */
+
+.person{
+  /* position: relative; */
+  position: absolute;
+  margin: 0;
+  z-index: 100;
+}
+
+.person-name{
+  margin-top: -20px;
+  margin-left: 20px;
+  width: 80px;
+}
+
+.look-top{ 
+  width: 63.8px;
+  height: 52px;
+  background-image : url(./assets/pers1-walking-forward.png) ;
+}  
+
+.look-left{ 
+  width: 63.8px;
+  height: 53px;
+  background-image : url(./assets/pers1-walking-left.png) ;
+} 
+
+.look-bottom{ 
+  width: 63.8px;
+  height: 52px;
+  background-image : url(./assets/pers1-walking-bottom.png) ;
+} 
+
+.look-right{ 
+  width: 63.8px;
+  height: 50px;
+  background-image : url(./assets/pers1-walking-right.png) ;
+}
+
+.move{
+  animation: play .6s steps(8) infinite;
+} 
+
+@keyframes play {
+  from { background-position:    0px; }
+  to { background-position: -510px; }
+}
+
+
+
+
+/* =======  items  ======= */
+
+.item{
+  position: absolute;
+  margin: 0;
+  z-index: 10;
+}
+
+.toilet_paper {
+}
+.liquid_soap {
+}
+.tuna_can {
+}
+
+/* =========  inventory  ========= */
+
+.inventory{
+  margin-top:20px;
+  border-style: dotted; 
+  width: 270px; 
+  height:60px; 
+  overflow: hidden;
+  position: relative;
+} 
+
+.item-view{
+  position: relative;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.column-right {
+  float: right;
+  width: 50%;
+}
+.column-left {
+  float: left;
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
